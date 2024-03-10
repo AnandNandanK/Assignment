@@ -13,12 +13,8 @@ express-fileupload 📁: Unleash the power of file uploads with this simple midd
 
 express-rate-limit ⏳: Keep your cosmic journeys in check with rate limiting middleware for Express.
 
-express-validator ✅: Navigate the cosmic chaos with ease using this middleware for validation in Express.
-
 jsonwebtoken 🔑: Safeguard your digital treasures with this JSON Web Token implementation for Node.js.
 
 mongoose 🍃: Plant the seeds of data with MongoDB object modeling for Node.js.
-
-multer 📦: Handle interstellar cargo effortlessly with middleware for handling multipart/form-data.
 
 nodemon 🔄: Let this utility be your trusty co-pilot, automatically restarting your Node.js server when files change.
