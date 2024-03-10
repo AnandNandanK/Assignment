@@ -16,6 +16,9 @@ app.use(fileupload({
     useTempFiles: true,
     tempFileDir: '/tmp/'
 }));
+// Mounting Routes
+app.use('/api/v1', routes);
+
 
 // Default Route
 app.get('/', (req, res) => {
@@ -23,8 +26,7 @@ app.get('/', (req, res) => {
     console.log('This is home page');
 });
 
-// Mounting Routes
-app.use('/api/v1', routes);
+
 
 // Rate Limiting
 const limiter = rateLimit({
