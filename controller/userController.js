@@ -1,8 +1,7 @@
 const UserProfile=require("../models/userProfile")
 const { required } = require('nodemon/lib/config');
-const userSchema = require('../models/userSchema');
 const UserSchema = require("../models/userSchema");
-const fs = require('fs'); 
+const fs = require('fs');
 
 
     exports.createProfile = async (req, res) => {
@@ -47,7 +46,10 @@ const fs = require('fs');
         
             // Create the User Profile
             const profileData = await UserProfile.create({ userName, userBio, userImage, userId });
+
+            const updateUser=await UserSchema.findByIdAndUpdate(userId,{userProfile:profileData._id}, { new: true });
         
+
             // Set req.profileId to the new profile's _id
             req.profileId = profileData._id.toString();
         

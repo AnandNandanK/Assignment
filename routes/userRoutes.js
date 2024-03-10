@@ -5,7 +5,7 @@ const login =require("../controller/login");
 const signUp =require("../controller/signUp");
 const {auth}=require("../middelware/auth");
 const {createProfile,updateProfile,getProfile,deleteProfile}=require("../controller/userController");
-const {followUser,unfollowUser,userIsFollowing} =require("../controller/followingController");
+const {followUser,unfollowUser,userIsFollowing,userFollowers} =require("../controller/followingController");
 
 
 // Importing Controller
@@ -31,6 +31,7 @@ router.delete('/deleteprofiles/:id',auth,deleteProfile);
 router.put('/followuser',auth,followUser);
 router.delete('/unfollowuser',auth,unfollowUser);
 router.get('/userIsFollowing',auth,userIsFollowing);
+router.get('/userFollowers',auth,userFollowers);
 
 
 module.exports=router;
